@@ -185,3 +185,7 @@ cython_debug/
 
 
 envs/
+
+__pycache__/
+*.pyc
+db.sqlite3
