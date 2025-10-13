@@ -189,3 +189,33 @@ envs/
 __pycache__/
 *.pyc
 db.sqlite3
+
+
+
+
+
+# Node modules (huge, regenerated via npm install)
+frontend/node_modules/
+
+# Build output (regenerated via npm run build)
+frontend/build/
+
+# Environment variables (sensitive info)
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Logs and debug
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# OS-specific
+frontend/.DS_Store
+frontend/Thumbs.db
+
+# IDE/editor configs (optional)
+frontend/.vscode/
+frontend/.idea/
