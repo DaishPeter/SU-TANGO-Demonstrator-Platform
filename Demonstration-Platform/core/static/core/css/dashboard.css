@@ -1,0 +1,108 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Sidebar */
+#sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    transition: all 0.3s ease;
+}
+
+#sidebar h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#sidebar .nav-link {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+/* Main content */
+main {
+    flex-grow: 1;
+    background-color: #f8f9fa;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+/* Partner section */
+.card-body h6 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-body .partner-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-body .partner-grid .partner-badge {
+    width: 80px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.card-body .partner-grid .partner-badge i {
+    display: block;
+    font-size: 1.5rem;
+    color: #6c757d;
+}
+
+.card-body .partner-grid .partner-badge .small {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: #333;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

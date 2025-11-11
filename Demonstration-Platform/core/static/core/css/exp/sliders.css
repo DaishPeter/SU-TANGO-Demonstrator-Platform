@@ -1,0 +1,62 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar h5 {
+    font-weight: 600;
+}
+
+#glyphGrid {
+    display: grid;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+.glyph {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.glyph:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+}
+
+.target-glyph {
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+.glyph-canvas {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.glyph-canvas:hover {
+    transform: scale(1.05);
+    background-color: #e9ecef;
+}
+
+
+#flashMessage {
+    width: 300px;
+    font-weight: 500;
+}
+
+.glyph-history-item {
+    width: 80px;
+}

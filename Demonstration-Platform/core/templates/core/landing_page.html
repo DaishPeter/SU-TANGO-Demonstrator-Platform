@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Tango Demonstrator</title>
+    <link rel="stylesheet" href="{% static 'core/css/landing_page.css' %}">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="mb-4">Welcome to Tango Demonstrator</h1>
+
+        {% if messages %}
+            <div class="mb-3">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div class="mb-3">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+
+            <div class="mb-3 form-check">
+                {{ form.workspaceToggle }}
+                {{ form.workspaceToggle.label_tag }}
+            </div>
+
+            <div class="mb-3">
+                {{ form.workspace.label_tag }}
+                {{ form.workspace }}
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Authenticate</button>
+        </form>
+    </div>
+</body>
+
+
+ <script>
+                const checkbox = document.getElementById('workspaceToggle');
+                const selectBox = document.getElementById('workspaceSelect');
+
+                function toggleWorkspace() {
+                    selectBox.disabled = !checkbox.checked;
+                }
+
+                checkbox.addEventListener('change', toggleWorkspace);
+                window.addEventListener('DOMContentLoaded', toggleWorkspace);
+            </script>
+</html>
